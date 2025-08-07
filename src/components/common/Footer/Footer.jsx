@@ -67,10 +67,10 @@ const Footer = () => (
           <div className="footer-section">
             <h4>Follow Us</h4>
             <div className="social-links">
-              <a href="#" className="social-link facebook">📘</a>
-              <a href="#" className="social-link twitter">🐦</a>
+              <a href="https://m.facebook.com/profile.php?id=100064106820772" target="_blank" rel="noopener noreferrer" className="social-link facebook">📘</a>
+              <a href="https://www.youtube.com/@ramakantverma122" target="_blank" rel="noopener noreferrer" className="social-link youtube">📺</a>
               <a href="#" className="social-link instagram">📷</a>
-              <a href="#" className="social-link youtube">📺</a>
+              <a href="#" className="social-link twitter">🐦</a>
             </div>
             <div className="newsletter">
               <h5>Newsletter</h5>
