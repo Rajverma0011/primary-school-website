@@ -76,12 +76,12 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  height: 5px;
+  background: var(--bg-gradient-primary);
 }
 
 .admission-card::before {
-  background: linear-gradient(90deg, var(--accent-color), #f97316);
+  background: var(--bg-gradient-warm);
 }
 
 .action-card:hover {
