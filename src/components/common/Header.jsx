@@ -45,7 +45,7 @@ const Header = () => {
               <img src="/images/logo.jpg.jfif" alt="R.K. Public School Logo" className="school-logo" />
               <div className="school-branding">
                 <h1 className="school-name">R.K. Public School</h1>
-                <p className="school-tagline">Excellence in Education Since 1995</p>
+                <p className="school-tagline">Education for Enlightenment Since 2012</p>
               </div>
             </Link>
 
