@@ -16,27 +16,6 @@ const Header = () => {
 
   return (
     <header className="modern-header">
-      <div className="header-top">
-        <div className="container">
-          <div className="header-info">
-            <div className="contact-info">
-              <span className="info-item">
-                📞 8400006780 | 9648505296
-              </span>
-              <span className="info-item">
-                📧 rkpublicbasti@gmail.com
-              </span>
-            </div>
-            <div className="header-actions">
-              <Link to="/admissions" className="admission-link">
-                <span className="admission-icon">🎓</span>
-                <span>Admissions Open 2024</span>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div className="header-main">
         <div className="container">
           <div className="header-content">
