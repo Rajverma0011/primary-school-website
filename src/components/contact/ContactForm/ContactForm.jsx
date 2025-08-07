@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './ContactForm.css';
-import axios from 'axios';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -8,10 +7,13 @@ const ContactForm = () => {
     email: '',
     message: '',
     phonenumber:'',
-    
   });
 
   const [status, setStatus] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Google Apps Script Web App URL
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxJgrvAYM47zn5nHwd1bVdVejsHrj9v9BhGEhtLxk-iF9mThWVRYk3ddpIwrsH6b296UA/exec';
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,16 +25,40 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setStatus('');
 
     try {
-      await axios.post('http://localhost:8000/api/contact/', formData);
-      setStatus('Thank you for your message! We will get back to you soon.');
+      // Prepare data for Google Sheets
+      const submissionData = {
+        ...formData,
+        timestamp: new Date().toISOString(),
+        source: 'Website Contact Form'
+      };
+
+      // Create form data for Google Apps Script
+      const formDataToSend = new FormData();
+      Object.keys(submissionData).forEach(key => {
+        formDataToSend.append(key, submissionData[key]);
+      });
+
+      // Send to Google Sheets via Apps Script
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        body: formDataToSend,
+        mode: 'no-cors' // Required for Google Apps Script
+      });
+
+      // Since mode is 'no-cors', we can't read the response
+      // But if no error is thrown, the submission was successful
+      setStatus('✅ Thank you for your message! We have received your inquiry and will get back to you soon.');
       setFormData({ name: '', email: '', message: '', phonenumber: '' });
+
     } catch (error) {
-      console.log('Backend not available, simulating form submission');
-      // Simulate successful submission when backend is not available
-      setStatus('Thank you for your message! We will get back to you soon. (Demo mode - form not actually submitted)');
-      setFormData({ name: '', email: '', message: '', phonenumber: '' });
+      console.error('Error submitting form:', error);
+      setStatus('❌ There was an error submitting your message. Please try again or contact us directly.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
