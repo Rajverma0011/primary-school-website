@@ -9,19 +9,19 @@ const WhyChooseUs = () => (
       <h2 className="section-title">Why Choose R.K. Public School?</h2>
       <div className="grid grid-3">
         <div className="feature-card">
-          <div className="feature-icon">🎯</div>
-          <h3>Academic Excellence</h3>
-          <p>CBSE affiliated curriculum with proven track record of academic success and university placements.</p>
+          <div className="feature-icon">📚</div>
+          <h3>CBSE Excellence</h3>
+          <p>Quality CBSE curriculum from Pre-Nursery to Class 8 with English medium instruction and modern teaching methods.</p>
         </div>
         <div className="feature-card">
-          <div className="feature-icon">🌱</div>
-          <h3>Holistic Development</h3>
-          <p>Focus on overall personality development including sports, arts, and character building.</p>
+          <div className="feature-icon">🏫</div>
+          <h3>Modern Facilities</h3>
+          <p>20 well-equipped classrooms, smart learning technology, science lab, computer lab, and safe transport service.</p>
         </div>
         <div className="feature-card">
-          <div className="feature-icon">👩‍🏫</div>
-          <h3>Expert Faculty</h3>
-          <p>Highly qualified and experienced teachers committed to nurturing each student's potential.</p>
+          <div className="feature-icon">👨‍🏫</div>
+          <h3>Qualified Faculty</h3>
+          <p>18+ experienced teachers with B.Ed/M.Ed qualifications led by Principal K.M. Shukla, committed to student success.</p>
         </div>
       </div>
     </div>
