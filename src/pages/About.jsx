@@ -78,6 +78,34 @@ const SchoolFeatures = () => (
 );
 
 const About = () => {
+  // Custom gallery images for About page - replace with actual Facebook photos
+  const aboutGalleryImages = [
+    {
+      id: 1,
+      src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      alt: "R.K. Public School Main Building",
+      caption: "Our Beautiful School Campus in Basti"
+    },
+    {
+      id: 2,
+      src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      alt: "Science Laboratory",
+      caption: "Well-Equipped Science Laboratory"
+    },
+    {
+      id: 3,
+      src: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      alt: "Smart Classroom",
+      caption: "Modern Smart Classrooms with Technology"
+    },
+    {
+      id: 4,
+      src: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      alt: "Students Learning",
+      caption: "Students Engaged in Learning Activities"
+    }
+  ];
+
   return (
     <div className="about-page">
       <div className="page-header">
@@ -90,6 +118,7 @@ const About = () => {
       <SchoolHistory />
       <MissionStatement />
       <SchoolFeatures />
+      <SchoolGallery images={aboutGalleryImages} title="Our School Life" />
       <StaffDirectory />
     </div>
   );
