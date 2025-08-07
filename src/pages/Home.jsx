@@ -60,6 +60,7 @@ const Home = () => {
     <div className="home-page">
       <Hero />
       <WhyChooseUs />
+      <YouTubeSection />
       <NewsSection />
       <QuickActions />
     </div>
