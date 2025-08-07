@@ -29,15 +29,28 @@ const ContactForm = () => {
     setStatus('');
 
     try {
-      // Prepare data for Google Sheets
+      // Prepare data for Google Sheets with proper formatting
       const submissionData = {
-        ...formData,
-        timestamp: new Date().toISOString(),
-        source: 'Website Contact Form'
+        name: formData.name,
+        email: formData.email,
+        phonenumber: formData.phonenumber,
+        message: formData.message,
+        timestamp: new Date().toLocaleString('en-IN', {
+          timeZone: 'Asia/Kolkata',
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit'
+        }),
+        source: 'R.K. Public School Website'
       };
 
-      // Create form data for Google Apps Script
-      const formDataToSend = new FormData();
+      console.log('Submitting data:', submissionData);
+
+      // Create URLSearchParams for better compatibility
+      const formDataToSend = new URLSearchParams();
       Object.keys(submissionData).forEach(key => {
         formDataToSend.append(key, submissionData[key]);
       });
@@ -45,18 +58,23 @@ const ContactForm = () => {
       // Send to Google Sheets via Apps Script
       const response = await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
         body: formDataToSend,
-        mode: 'no-cors' // Required for Google Apps Script
+        mode: 'no-cors'
       });
 
-      // Since mode is 'no-cors', we can't read the response
-      // But if no error is thrown, the submission was successful
-      setStatus('✅ Thank you for your message! We have received your inquiry and will get back to you soon.');
+      // Success message
+      setStatus('✅ Thank you for contacting R.K. Public School! We have received your inquiry and will get back to you soon.');
       setFormData({ name: '', email: '', message: '', phonenumber: '' });
+
+      // Optional: Also log success for debugging
+      console.log('Form submitted successfully');
 
     } catch (error) {
       console.error('Error submitting form:', error);
-      setStatus('❌ There was an error submitting your message. Please try again or contact us directly.');
+      setStatus('❌ There was an error submitting your message. Please try again or call us at 8400006780.');
     } finally {
       setIsSubmitting(false);
     }
