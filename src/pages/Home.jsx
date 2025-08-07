@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from '../components/home/Hero.jsx';
 import NewsSection from '../components/home/NewsSection/NewsSection.jsx';
+import YouTubeSection from '../components/common/YouTubeSection/YouTubeSection.jsx';
 import './Home.css';
 
 const WhyChooseUs = () => (
