@@ -11,7 +11,7 @@ const Footer = () => (
             <div className="footer-brand">
               <img src="/images/logo.jpg.jfif" alt="R.K. Public School" className="footer-logo" />
               <h3>R.K. Public School</h3>
-              <p>Nurturing minds, building futures, creating leaders of tomorrow through excellence in education.</p>
+              <p>Education for Enlightenment - Empowering students with knowledge, discipline, and values to excel in life.</p>
             </div>
           </div>
 
