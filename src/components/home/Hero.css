@@ -56,8 +56,9 @@
 }
 
 .highlight {
-  color: #fbbf24;
+  color: var(--accent-color);
   display: block;
+  text-shadow: 0 2px 4px rgba(230, 126, 34, 0.3);
 }
 
 .hero-subtitle {
