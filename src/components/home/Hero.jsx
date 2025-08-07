@@ -4,88 +4,117 @@ import './Hero.css';
 
 const Hero = () => {
   return (
-    <section className="hero-section">
-      <div className="hero-background" style={{ backgroundImage: `url(https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80)` }}>
-        <div className="hero-overlay"></div>
-        <div className="container">
-          <div className="hero-content">
-            <div className="hero-text">
-              <span className="hero-badge">Established 2012</span>
-              <h1 className="hero-title">
-                Education for
-                <span className="highlight"> Enlightenment</span>
-              </h1>
-              <p className="hero-subtitle">
-                At R.K. Public School, Basti, we empower students with knowledge, discipline, and values
-                to excel in life. Our CBSE curriculum from Pre-Nursery to Class 8 nurtures responsible
-                citizens with integrity, respect, and compassion.
-              </p>
-              <div className="hero-stats">
-                <div className="stat-item">
-                  <span className="stat-number">Pre-8</span>
-                  <span className="stat-label">Grade Levels</span>
-                </div>
-                <div className="stat-item">
-                  <span className="stat-number">18+</span>
-                  <span className="stat-label">Teachers</span>
-                </div>
-                <div className="stat-item">
-                  <span className="stat-number">CBSE</span>
-                  <span className="stat-label">Curriculum</span>
-                </div>
-              </div>
-              <div className="hero-actions">
-                <Link to="/admissions" className="primary-btn">
-                  Apply for Admission
-                </Link>
-                <Link to="/about" className="secondary-btn">
-                  Learn More
-                </Link>
-              </div>
+    <section className="modern-hero">
+      {/* Main Hero Section */}
+      <div className="hero-main">
+        <div className="hero-background">
+          <div className="hero-overlay"></div>
+        </div>
+
+        <div className="hero-container">
+          <div className="hero-content-center">
+            <div className="hero-badge">
+              <span className="badge-icon">🎓</span>
+              <span>Established 2012 • Education for Enlightenment</span>
             </div>
-            <div className="hero-image">
-              <div className="floating-card academic-card">
-                <div className="card-icon">📚</div>
-                <h4>CBSE Curriculum</h4>
-                <p>Quality education from Pre-Nursery to Class 8</p>
+
+            <h1 className="hero-headline">
+              Nurturing Tomorrow's
+              <span className="headline-highlight"> Leaders</span>
+            </h1>
+
+            <p className="hero-description">
+              At R.K. Public School, Basti, we provide quality CBSE education from Pre-Nursery to Class 8.
+              Our mission is to empower students with knowledge, discipline, and values to excel in life and
+              become responsible citizens of tomorrow.
+            </p>
+
+            <div className="hero-cta-section">
+              <Link to="/admissions" className="cta-primary">
+                <span className="cta-icon">📝</span>
+                Apply for Admission 2024
+              </Link>
+              <Link to="/about" className="cta-secondary">
+                <span className="cta-icon">ℹ️</span>
+                Learn About Us
+              </Link>
+            </div>
+
+            <div className="hero-stats-row">
+              <div className="stat-box">
+                <div className="stat-number">Pre-8</div>
+                <div className="stat-label">Grade Levels</div>
               </div>
-              <div className="floating-card sports-card">
-                <div className="card-icon">🏆</div>
-                <h4>Sports & Values</h4>
-                <p>Cricket, Football, Kabaddi with moral education</p>
+              <div className="stat-box">
+                <div className="stat-number">18+</div>
+                <div className="stat-label">Expert Teachers</div>
               </div>
-              <div className="floating-card tech-card">
-                <div className="card-icon">💻</div>
-                <h4>Smart Learning</h4>
-                <p>Computer education with science lab facilities</p>
+              <div className="stat-box">
+                <div className="stat-number">CBSE</div>
+                <div className="stat-label">Board Affiliation</div>
+              </div>
+              <div className="stat-box">
+                <div className="stat-number">12+</div>
+                <div className="stat-label">Years Excellence</div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="hero-features">
+      {/* YouTube & Social Section */}
+      <div className="hero-media-section">
         <div className="container">
-          <div className="features-grid">
-            <div className="feature-item">
-              <div className="feature-icon">🎓</div>
-              <h3>Quality Education</h3>
-              <p>CBSE curriculum with experienced faculty</p>
+          <div className="media-content">
+            <div className="media-text">
+              <h3>🎬 Watch Our School Life</h3>
+              <p>Discover the vibrant learning environment at R.K. Public School through our video content</p>
+              <a
+                href="https://www.youtube.com/@ramakantverma122"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="youtube-link"
+              >
+                <span className="youtube-icon">📺</span>
+                Visit Our YouTube Channel
+              </a>
             </div>
-            <div className="feature-item">
-              <div className="feature-icon">🌟</div>
-              <h3>Holistic Development</h3>
-              <p>Focus on academic, physical, and moral growth</p>
+            <div className="media-embed">
+              <div className="video-placeholder">
+                <div className="video-play-btn">
+                  <span>▶️</span>
+                </div>
+                <p>School Introduction Video</p>
+                <small>Click to watch on YouTube</small>
+              </div>
             </div>
-            <div className="feature-item">
-              <div className="feature-icon">🔬</div>
-              <h3>Modern Facilities</h3>
-              <p>State-of-the-art labs and infrastructure</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Quick Info Cards */}
+      <div className="hero-info-cards">
+        <div className="container">
+          <div className="info-grid">
+            <div className="info-card">
+              <div className="card-icon blue">📚</div>
+              <h4>Academic Excellence</h4>
+              <p>CBSE curriculum with modern teaching methodologies and smart classrooms</p>
             </div>
-            <div className="feature-item">
-              <div className="feature-icon">👥</div>
-              <h3>Caring Community</h3>
-              <p>Supportive environment for every student</p>
+            <div className="info-card">
+              <div className="card-icon green">🏆</div>
+              <h4>Sports & Activities</h4>
+              <p>Cricket, Football, Kabaddi and various co-curricular activities for holistic development</p>
+            </div>
+            <div className="info-card">
+              <div className="card-icon orange">💻</div>
+              <h4>Modern Facilities</h4>
+              <p>Computer lab, science laboratory, smart boards and CCTV surveillance</p>
+            </div>
+            <div className="info-card">
+              <div className="card-icon purple">🚌</div>
+              <h4>Safe Transport</h4>
+              <p>Reliable school transport service covering major areas in Basti district</p>
             </div>
           </div>
         </div>
