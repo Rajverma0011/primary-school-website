@@ -22,11 +22,11 @@ const Header = () => {
             <div className="contact-info">
               <span className="info-item">
                 <i className="icon-phone"></i>
-                📞 +91-XXXX-XXXX-XX
+                📞 8400006780 | 9648505296
               </span>
               <span className="info-item">
                 <i className="icon-email"></i>
-                📧 info@rkpublicschool.edu.in
+                📧 rkpublicbasti@gmail.com
               </span>
             </div>
             <div className="header-actions">
