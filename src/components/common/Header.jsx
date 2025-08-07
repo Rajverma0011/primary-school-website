@@ -21,17 +21,22 @@ const Header = () => {
           <div className="header-info">
             <div className="contact-info">
               <span className="info-item">
-                <i className="icon-phone"></i>
-                📞 8400006780 | 9648505296
+                <span className="info-icon">📞</span>
+                <span className="info-text">8400006780 | 9648505296</span>
               </span>
               <span className="info-item">
-                <i className="icon-email"></i>
-                📧 rkpublicbasti@gmail.com
+                <span className="info-icon">📧</span>
+                <span className="info-text">rkpublicbasti@gmail.com</span>
+              </span>
+              <span className="info-item">
+                <span className="info-icon">🕒</span>
+                <span className="info-text">Mon-Sat: 8:00 AM - 2:00 PM</span>
               </span>
             </div>
             <div className="header-actions">
               <Link to="/admissions" className="admission-link">
-                Admissions Open
+                <span className="admission-icon">🎓</span>
+                <span>Admissions Open 2024</span>
               </Link>
             </div>
           </div>
@@ -42,10 +47,13 @@ const Header = () => {
         <div className="container">
           <div className="header-content">
             <Link to="/" className="brand-section">
-              <img src="/images/logo.jpg.jfif" alt="R.K. Public School Logo" className="school-logo" />
+              <div className="logo-container">
+                <img src="/images/logo.jpg.jfif" alt="R.K. Public School Logo" className="school-logo" />
+              </div>
               <div className="school-branding">
                 <h1 className="school-name">R.K. Public School</h1>
                 <p className="school-tagline">Education for Enlightenment Since 2012</p>
+                <p className="school-location">Basti, Uttar Pradesh</p>
               </div>
             </Link>
 
@@ -55,35 +63,48 @@ const Header = () => {
                 className={`nav-link ${isActiveLink('/') ? 'active' : ''}`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Home
+                <span className="nav-icon">🏠</span>
+                <span className="nav-text">Home</span>
               </Link>
               <Link
                 to="/about"
                 className={`nav-link ${isActiveLink('/about') ? 'active' : ''}`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                About Us
+                <span className="nav-icon">ℹ️</span>
+                <span className="nav-text">About Us</span>
               </Link>
               <Link
                 to="/academics"
                 className={`nav-link ${isActiveLink('/academics') ? 'active' : ''}`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Academics
+                <span className="nav-icon">📚</span>
+                <span className="nav-text">Academics</span>
               </Link>
               <Link
                 to="/contact"
                 className={`nav-link ${isActiveLink('/contact') ? 'active' : ''}`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Contact
+                <span className="nav-icon">📞</span>
+                <span className="nav-text">Contact</span>
               </Link>
-              <Link to="/admissions" className="nav-link cta-link">
-                Apply Now
+              <Link
+                to="/admissions"
+                className={`nav-link cta-link ${isActiveLink('/admissions') ? 'active' : ''}`}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <span className="nav-icon">🎓</span>
+                <span className="nav-text">Apply Now</span>
               </Link>
             </nav>
 
-            <button className="mobile-menu-toggle" onClick={toggleMobileMenu}>
+            <button
+              className="mobile-menu-toggle"
+              onClick={toggleMobileMenu}
+              aria-label="Toggle navigation menu"
+            >
               <span className={`hamburger ${isMobileMenuOpen ? 'open' : ''}`}>
                 <span></span>
                 <span></span>
