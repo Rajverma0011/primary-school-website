@@ -1,0 +1,106 @@
+.gallery-page {
+  background: var(--bg-primary);
+}
+
+.page-header {
+  background: var(--bg-gradient-primary);
+  color: var(--text-light);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text-light);
+}
+
+.page-header p {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.photo-instructions {
+  padding: 3rem 0;
+  background: var(--bg-tertiary);
+}
+
+.instruction-card {
+  background: var(--bg-primary);
+  padding: 2.5rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: var(--shadow-medium);
+  border: 2px solid var(--secondary-color);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.instruction-card h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.instruction-card p {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-size: 1.125rem;
+}
+
+.facebook-link {
+  background: var(--bg-gradient-primary);
+  color: var(--text-light);
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-medium);
+}
+
+.facebook-link:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-large);
+  color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 3rem 0;
+  }
+  
+  .page-header h1 {
+    font-size: 2rem;
+  }
+  
+  .page-header p {
+    font-size: 1.125rem;
+  }
+  
+  .photo-instructions {
+    padding: 2rem 0;
+  }
+  
+  .instruction-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .instruction-card h3 {
+    font-size: 1.25rem;
+  }
+  
+  .instruction-card p {
+    font-size: 1rem;
+  }
+}
