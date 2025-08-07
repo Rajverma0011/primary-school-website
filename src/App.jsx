@@ -7,22 +7,22 @@ import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
 import Academics from './pages/Academics.jsx';
+
 function App() {
   return (
     <div className="main-container">
       <Header />
-      <main style={{ padding: '1rem' }}>
+      <main className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path ="/academics" element={<Academics />} />
+          <Route path="/academics" element={<Academics />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/admissions" element={<div className="page-content"><div className="container"><h1>Admissions</h1><p>Admissions page coming soon!</p></div></div>} />
         </Routes>
       </main>
       <Footer />
     </div>
-
-
   );
 }
 
