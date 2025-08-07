@@ -21,16 +21,10 @@ const Header = () => {
           <div className="header-info">
             <div className="contact-info">
               <span className="info-item">
-                <span className="info-icon">📞</span>
-                <span className="info-text">8400006780 | 9648505296</span>
+                📞 8400006780 | 9648505296
               </span>
               <span className="info-item">
-                <span className="info-icon">📧</span>
-                <span className="info-text">rkpublicbasti@gmail.com</span>
-              </span>
-              <span className="info-item">
-                <span className="info-icon">🕒</span>
-                <span className="info-text">Mon-Sat: 8:00 AM - 2:00 PM</span>
+                📧 rkpublicbasti@gmail.com
               </span>
             </div>
             <div className="header-actions">
