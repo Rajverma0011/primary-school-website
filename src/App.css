@@ -1,0 +1,16 @@
+
+/* Global Layout Styling */
+.main-container {
+  max-width: 1200px;   /* You can increase this for wider layout */
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+body, html {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}

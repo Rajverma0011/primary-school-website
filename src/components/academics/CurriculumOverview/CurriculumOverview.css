@@ -1,0 +1,19 @@
+.curriculum-container {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+.curriculum-container h3 {
+  font-size: 1.75rem;
+  color: #007bff;
+  margin-top: 0;
+}
+
+.curriculum-container p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+}

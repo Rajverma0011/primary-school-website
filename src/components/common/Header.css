@@ -1,0 +1,52 @@
+.site-header {
+  display: flex;
+  justify-content: center; /* Horizontally centers the .header-content */
+  align-items: center;
+  width: 100%;
+  background: #aaa4ac;
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  height: 50px; /* Adjust this value to fit your logo's size */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.school-name {
+  flex: 1;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.site-header nav a {
+  margin: 0 1rem;
+  color: #0c5db3; /* Changed to blue to be visible on a light background */
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.site-header nav a:hover {
+  text-decoration: underline;
+}

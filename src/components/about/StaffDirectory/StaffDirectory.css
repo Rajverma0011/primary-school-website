@@ -1,0 +1,43 @@
+.staff-directory {
+  text-align: center;
+  padding: 2rem;
+}
+
+.staff-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.staff-card {
+  background: #ca8181;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 220px;
+  padding: 1.5rem;
+  transition: transform 0.2s;
+}
+
+.staff-card:hover {
+  transform: translateY(-5px);
+}
+
+.staff-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 20%; /* Makes the image circular */
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.staff-name {
+  margin: 0.5rem 0;
+  font-size: 1.25rem;
+}
+
+.staff-title {
+  margin: 0;
+  color: #1a1818;
+}

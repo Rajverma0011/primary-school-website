@@ -1,0 +1,36 @@
+.news-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.news-section h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.news-list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.news-item {
+  background-color: #a28d8d;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 300px;
+  text-align: left;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.news-item h3 {
+  margin-top: 0;
+}
+
+.read-more {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
