@@ -10,28 +10,28 @@ const Hero = () => {
         <div className="container">
           <div className="hero-content">
             <div className="hero-text">
-              <span className="hero-badge">Established 1995</span>
+              <span className="hero-badge">Established 2012</span>
               <h1 className="hero-title">
-                Shaping Tomorrow's
-                <span className="highlight"> Leaders</span>
+                Education for
+                <span className="highlight"> Enlightenment</span>
               </h1>
               <p className="hero-subtitle">
-                At R.K. Public School, we provide world-class education that nurtures creativity,
-                critical thinking, and character development. Join our community of learners
-                committed to excellence and innovation.
+                At R.K. Public School, Basti, we empower students with knowledge, discipline, and values
+                to excel in life. Our CBSE curriculum from Pre-Nursery to Class 8 nurtures responsible
+                citizens with integrity, respect, and compassion.
               </p>
               <div className="hero-stats">
                 <div className="stat-item">
-                  <span className="stat-number">1000+</span>
-                  <span className="stat-label">Students</span>
+                  <span className="stat-number">Pre-8</span>
+                  <span className="stat-label">Grade Levels</span>
                 </div>
                 <div className="stat-item">
-                  <span className="stat-number">50+</span>
+                  <span className="stat-number">18+</span>
                   <span className="stat-label">Teachers</span>
                 </div>
                 <div className="stat-item">
-                  <span className="stat-number">95%</span>
-                  <span className="stat-label">Success Rate</span>
+                  <span className="stat-number">CBSE</span>
+                  <span className="stat-label">Curriculum</span>
                 </div>
               </div>
               <div className="hero-actions">
