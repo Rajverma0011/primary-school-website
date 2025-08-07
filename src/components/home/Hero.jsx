@@ -46,18 +46,18 @@ const Hero = () => {
             <div className="hero-image">
               <div className="floating-card academic-card">
                 <div className="card-icon">📚</div>
-                <h4>Academic Excellence</h4>
-                <p>CBSE Curriculum with modern teaching methods</p>
+                <h4>CBSE Curriculum</h4>
+                <p>Quality education from Pre-Nursery to Class 8</p>
               </div>
               <div className="floating-card sports-card">
                 <div className="card-icon">🏆</div>
-                <h4>Sports & Activities</h4>
-                <p>Comprehensive co-curricular programs</p>
+                <h4>Sports & Values</h4>
+                <p>Cricket, Football, Kabaddi with moral education</p>
               </div>
               <div className="floating-card tech-card">
                 <div className="card-icon">💻</div>
-                <h4>Smart Classrooms</h4>
-                <p>Technology-enabled learning environment</p>
+                <h4>Smart Learning</h4>
+                <p>Computer education with science lab facilities</p>
               </div>
             </div>
           </div>
