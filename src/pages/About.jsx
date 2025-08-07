@@ -1,6 +1,7 @@
 import React from 'react';
 import MissionStatement from '../components/about/MissionStatement/MissionStatement.jsx';
 import StaffDirectory from '../components/about/StaffDirectory/StaffDirectory.jsx';
+import SchoolGallery from '../components/common/SchoolGallery/SchoolGallery.jsx';
 import './About.css';
 
 const SchoolHistory = () => (
