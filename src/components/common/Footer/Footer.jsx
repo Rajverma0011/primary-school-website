@@ -43,22 +43,22 @@ const Footer = () => (
               <div className="contact-item">
                 <span className="contact-icon">📍</span>
                 <div>
-                  <p>123 Education Street</p>
-                  <p>Knowledge City, State 123456</p>
+                  <p>Sikandarpur, near PP Petrol Pump</p>
+                  <p>District Basti, Uttar Pradesh</p>
                 </div>
               </div>
               <div className="contact-item">
                 <span className="contact-icon">📞</span>
                 <div>
-                  <p>+91-XXXX-XXXX-XX</p>
-                  <p>+91-XXXX-XXXX-XX</p>
+                  <p>8400006780</p>
+                  <p>9648505296</p>
                 </div>
               </div>
               <div className="contact-item">
                 <span className="contact-icon">📧</span>
                 <div>
-                  <p>info@rkpublicschool.edu.in</p>
-                  <p>admissions@rkpublicschool.edu.in</p>
+                  <p>rkpublicbasti@gmail.com</p>
+                  <p>admissions: rkpublicbasti@gmail.com</p>
                 </div>
               </div>
             </div>
