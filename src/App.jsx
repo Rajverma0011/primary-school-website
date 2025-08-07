@@ -7,6 +7,7 @@ import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
 import Contact from './pages/Contact.jsx';
 import Academics from './pages/Academics.jsx';
+import Admissions from './pages/Admissions.jsx';
 
 function App() {
   return (
@@ -18,7 +19,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/academics" element={<Academics />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/admissions" element={<div className="page-content"><div className="container"><h1>Admissions</h1><p>Admissions page coming soon!</p></div></div>} />
+          <Route path="/admissions" element={<Admissions />} />
         </Routes>
       </main>
       <Footer />
