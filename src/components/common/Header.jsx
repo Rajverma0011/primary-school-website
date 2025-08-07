@@ -77,6 +77,14 @@ const Header = () => {
                 <span className="nav-text">Academics</span>
               </Link>
               <Link
+                to="/gallery"
+                className={`nav-link ${isActiveLink('/gallery') ? 'active' : ''}`}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <span className="nav-icon">📸</span>
+                <span className="nav-text">Gallery</span>
+              </Link>
+              <Link
                 to="/contact"
                 className={`nav-link ${isActiveLink('/contact') ? 'active' : ''}`}
                 onClick={() => setIsMobileMenuOpen(false)}
