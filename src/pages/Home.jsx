@@ -35,8 +35,8 @@ const QuickActions = () => (
       <div className="grid grid-2">
         <div className="action-card admission-card">
           <div className="action-content">
-            <h3>Admission Open</h3>
-            <p>Apply now for Academic Year 2024-25. Limited seats available.</p>
+            <h3>Admissions Open</h3>
+            <p>Rolling admissions for Academic Session July-May. Join our CBSE curriculum from Pre-Nursery to Class 8.</p>
             <a href="/admissions" className="action-btn primary">Apply Now</a>
           </div>
           <div className="action-icon">🎓</div>
@@ -44,8 +44,8 @@ const QuickActions = () => (
         <div className="action-card contact-card">
           <div className="action-content">
             <h3>Visit Our Campus</h3>
-            <p>Schedule a visit to experience our world-class facilities and learning environment.</p>
-            <a href="/contact" className="action-btn secondary">Schedule Visit</a>
+            <p>Located in Sikandarpur, Basti. Visit us Monday-Saturday, 8:00 AM to 2:00 PM to explore our facilities.</p>
+            <a href="/contact" className="action-btn secondary">Contact Us</a>
           </div>
           <div className="action-icon">🏫</div>
         </div>
