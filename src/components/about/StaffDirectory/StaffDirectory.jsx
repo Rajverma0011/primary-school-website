@@ -6,39 +6,39 @@ const StaffDirectory = () => {
   const [staffList, setStaffList] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  // Fallback staff data
+  // Real school staff data
   const fallbackStaff = [
     {
       id: 1,
-      name: "Dr. Priya Sharma",
+      name: "K.M. Shukla",
       position: "Principal",
       photo: "/images/manager.jpg.jfif",
-      qualification: "M.Ed, Ph.D in Education",
-      experience: "15+ years"
+      qualification: "M.Ed, B.Ed",
+      experience: "Education Leadership"
     },
     {
       id: 2,
-      name: "Mr. Rajesh Kumar",
+      name: "Mrs. Nandita Singh",
       position: "Vice Principal",
       photo: "/images/manager.jpg.jfif",
       qualification: "M.A, B.Ed",
-      experience: "12+ years"
+      experience: "Academic Administration"
     },
     {
       id: 3,
-      name: "Ms. Anjali Gupta",
+      name: "Mr. Rahul Verma",
       position: "Academic Coordinator",
       photo: "/images/manager.jpg.jfif",
       qualification: "M.Sc, B.Ed",
-      experience: "10+ years"
+      experience: "CBSE Curriculum Expert"
     },
     {
       id: 4,
-      name: "Mr. Suresh Patel",
-      position: "Sports Coordinator",
+      name: "Mrs. Meena Yadav",
+      position: "Primary Section Head",
       photo: "/images/manager.jpg.jfif",
-      qualification: "M.P.Ed",
-      experience: "8+ years"
+      qualification: "B.Ed, Primary Education",
+      experience: "Early Childhood Education"
     }
   ];
 
