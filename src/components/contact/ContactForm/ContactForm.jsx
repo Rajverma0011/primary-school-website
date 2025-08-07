@@ -111,7 +111,9 @@ const ContactForm = () => {
             required
           ></textarea>
         </div>
-        <button type="submit" className="submit-button">Send Message</button>
+        <button type="submit" className="submit-button" disabled={isSubmitting}>
+          {isSubmitting ? 'Sending...' : 'Send Message'}
+        </button>
       </form>
     </div>
   );
