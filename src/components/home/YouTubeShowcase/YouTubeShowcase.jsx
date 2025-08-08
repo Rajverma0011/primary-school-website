@@ -55,9 +55,9 @@ const YouTubeShowcase = () => {
                   <p>Click to watch our latest videos</p>
                 </div>
               </div>
-              <img 
-                src="https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F61ec69b6e26543ce8e7f6db674f3d517?format=webp&width=1200" 
-                alt="School Video Preview" 
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F61ec69b6e26543ce8e7f6db674f3d517?format=webp&width=1600&quality=95"
+                alt="School Video Preview"
                 className="video-thumbnail"
               />
             </div>

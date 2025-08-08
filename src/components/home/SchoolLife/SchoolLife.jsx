@@ -6,28 +6,28 @@ const SchoolLife = () => {
   const highlightImages = [
     {
       id: 1,
-      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F61ec69b6e26543ce8e7f6db674f3d517?format=webp&width=800",
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F61ec69b6e26543ce8e7f6db674f3d517?format=webp&width=1200&quality=95",
       alt: "Morning Assembly",
       title: "Daily Assembly",
       description: "Building discipline and values every morning"
     },
     {
       id: 2,
-      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F58556c622ec34048aa073781222d03d0?format=webp&width=800",
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F58556c622ec34048aa073781222d03d0?format=webp&width=1200&quality=95",
       alt: "Happy Students",
       title: "Happy Learning",
       description: "Joyful environment for student growth"
     },
     {
       id: 3,
-      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F7818f51370174c5a9469875fb143b5d4?format=webp&width=800",
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F7818f51370174c5a9469875fb143b5d4?format=webp&width=1200&quality=95",
       alt: "Cultural Program",
       title: "Cultural Events",
       description: "Celebrating festivals and cultural programs"
     },
     {
       id: 4,
-      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2Fff3f60e7802d4567808767a5455a08b9?format=webp&width=800",
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2Fff3f60e7802d4567808767a5455a08b9?format=webp&width=1200&quality=95",
       alt: "Dance Performance",
       title: "Talent Showcase",
       description: "Students expressing creativity through arts"
