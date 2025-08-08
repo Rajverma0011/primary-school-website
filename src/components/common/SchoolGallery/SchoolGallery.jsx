@@ -4,43 +4,43 @@ import './SchoolGallery.css';
 const SchoolGallery = ({ images, title = "School Gallery" }) => {
   const [selectedImage, setSelectedImage] = useState(null);
 
-  // Placeholder school images - replace these with actual photos from Facebook
+  // Real school images from R.K. Public School
   const defaultImages = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "School Building Exterior",
-      caption: "R.K. Public School Main Building"
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2Fefb05eacf01b4bdaad05af3ec3a6c4e9?format=webp&width=800",
+      alt: "R.K. Public School Admission",
+      caption: "R.K. Public School - Quality Education"
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Classroom Interior",
-      caption: "Modern Smart Classrooms"
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F58556c622ec34048aa073781222d03d0?format=webp&width=800",
+      alt: "Happy Students",
+      caption: "Our Happy Students with Teacher"
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Students in Library",
-      caption: "Students Learning Together"
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F7818f51370174c5a9469875fb143b5d4?format=webp&width=800",
+      alt: "Cultural Program",
+      caption: "Republic Day Cultural Program"
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Science Laboratory",
-      caption: "Well-Equipped Science Lab"
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F5cdcc8e4688240aeabdc484cc1d414d1?format=webp&width=800",
+      alt: "Computer Education",
+      caption: "Computer Lab Session"
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Computer Lab",
-      caption: "Computer Education Center"
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F61ec69b6e26543ce8e7f6db674f3d517?format=webp&width=800",
+      alt: "Morning Assembly",
+      caption: "Daily Morning Assembly"
     },
     {
       id: 6,
-      src: "https://images.unsplash.com/photo-1559713714-5-bb-9-ede-8-d-d-1-e-92-c-e-33-d-a-2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Sports Ground",
-      caption: "School Sports Facilities"
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2Fff3f60e7802d4567808767a5455a08b9?format=webp&width=800",
+      alt: "Cultural Dance",
+      caption: "Students Performing Cultural Dance"
     }
   ];
 
