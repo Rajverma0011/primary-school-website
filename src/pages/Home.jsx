@@ -1,6 +1,7 @@
 import React from 'react';
 import Hero from '../components/home/Hero.jsx';
 import NewsSection from '../components/home/NewsSection/NewsSection.jsx';
+import SchoolLife from '../components/home/SchoolLife/SchoolLife.jsx';
 import './Home.css';
 
 const WhyChooseUs = () => (
@@ -59,6 +60,7 @@ const Home = () => {
     <div className="home-page">
       <Hero />
       <WhyChooseUs />
+      <SchoolLife />
       <NewsSection />
       <QuickActions />
     </div>
