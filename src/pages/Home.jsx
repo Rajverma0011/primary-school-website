@@ -2,6 +2,7 @@ import React from 'react';
 import Hero from '../components/home/Hero.jsx';
 import NewsSection from '../components/home/NewsSection/NewsSection.jsx';
 import SchoolLife from '../components/home/SchoolLife/SchoolLife.jsx';
+import YouTubeShowcase from '../components/home/YouTubeShowcase/YouTubeShowcase.jsx';
 import './Home.css';
 
 const WhyChooseUs = () => (
@@ -20,7 +21,7 @@ const WhyChooseUs = () => (
           <p>20 well-equipped classrooms, smart learning technology, science lab, computer lab, and safe transport service.</p>
         </div>
         <div className="feature-card">
-          <div className="feature-icon">👨‍🏫</div>
+          <div className="feature-icon">👨���🏫</div>
           <h3>Qualified Faculty</h3>
           <p>18+ experienced teachers with B.Ed/M.Ed qualifications led by Principal K.M. Shukla, committed to student success.</p>
         </div>
@@ -48,7 +49,7 @@ const QuickActions = () => (
             <p>Located in Sikandarpur, Basti. Visit us Monday-Saturday, 8:00 AM to 2:00 PM to explore our facilities.</p>
             <a href="/contact" className="action-btn secondary">Contact Us</a>
           </div>
-          <div className="action-icon">🏫</div>
+          <div className="action-icon">��</div>
         </div>
       </div>
     </div>
@@ -61,6 +62,7 @@ const Home = () => {
       <Hero />
       <WhyChooseUs />
       <SchoolLife />
+      <YouTubeShowcase />
       <NewsSection />
       <QuickActions />
     </div>
