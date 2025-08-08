@@ -62,35 +62,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* YouTube & Social Section */}
-      <div className="hero-media-section">
-        <div className="container">
-          <div className="media-content">
-            <div className="media-text">
-              <h3>🎬 Watch Our School Life</h3>
-              <p>Discover the vibrant learning environment at R.K. Public School through our video content</p>
-              <a
-                href="https://www.youtube.com/@ramakantverma122"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="youtube-link"
-              >
-                <span className="youtube-icon">📺</span>
-                Visit Our YouTube Channel
-              </a>
-            </div>
-            <div className="media-embed">
-              <div className="video-placeholder">
-                <div className="video-play-btn">
-                  <span>▶️</span>
-                </div>
-                <p>School Introduction Video</p>
-                <small>Click to watch on YouTube</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Quick Info Cards */}
       <div className="hero-info-cards">

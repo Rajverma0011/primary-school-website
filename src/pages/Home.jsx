@@ -1,7 +1,6 @@
 import React from 'react';
 import Hero from '../components/home/Hero.jsx';
 import NewsSection from '../components/home/NewsSection/NewsSection.jsx';
-import YouTubeSection from '../components/common/YouTubeSection/YouTubeSection.jsx';
 import './Home.css';
 
 const WhyChooseUs = () => (
@@ -60,7 +59,6 @@ const Home = () => {
     <div className="home-page">
       <Hero />
       <WhyChooseUs />
-      <YouTubeSection />
       <NewsSection />
       <QuickActions />
     </div>
