@@ -8,38 +8,38 @@ const Gallery = () => {
     {
       id: 1,
       src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2Fefb05eacf01b4bdaad05af3ec3a6c4e9?format=webp&width=1600&quality=90",
-      alt: "R.K. Public School Admission Promotion",
-      caption: "R.K. Public School - Admission Open 2024"
+      alt: "R.K. Public School Photo",
+      caption: "School Life"
     },
     {
       id: 2,
       src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F58556c622ec34048aa073781222d03d0?format=webp&width=1600&quality=90",
-      alt: "Happy Students with Teacher",
-      caption: "Our Happy Students with Faculty Members"
+      alt: "R.K. Public School Photo",
+      caption: "School Life"
     },
     {
       id: 3,
       src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F1d21f9df05e848439cee9859666e887d?format=webp&width=1600&quality=90",
-      alt: "Group Photo with Faculty",
-      caption: "Group Photo with Faculty and Students"
+      alt: "R.K. Public School Photo",
+      caption: "School Life"
     },
     {
       id: 4,
       src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F5cdcc8e4688240aeabdc484cc1d414d1?format=webp&width=1600&quality=90",
-      alt: "Computer Lab Session",
-      caption: "Computer Education in Progress"
+      alt: "R.K. Public School Photo",
+      caption: "School Life"
     },
     {
       id: 5,
       src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F61ec69b6e26543ce8e7f6db674f3d517?format=webp&width=1600&quality=90",
-      alt: "Morning Assembly",
-      caption: "Morning Assembly - Building Discipline and Values"
+      alt: "R.K. Public School Photo",
+      caption: "School Life"
     },
     {
       id: 6,
       src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2Ff0dd86c20b4e4b638e107e03db9e9fc2?format=webp&width=1600&quality=90",
-      alt: "School Assembly Line",
-      caption: "Students in Morning Assembly Formation"
+      alt: "R.K. Public School Photo",
+      caption: "School Life"
     }
   ];
 
