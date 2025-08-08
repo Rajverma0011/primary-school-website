@@ -3,106 +3,118 @@ import SchoolGallery from '../components/common/SchoolGallery/SchoolGallery.jsx'
 import './Gallery.css';
 
 const Gallery = () => {
-  // Comprehensive gallery images - replace these with actual photos from Facebook
+  // Real school photos from R.K. Public School
   const schoolPhotos = [
     {
       id: 1,
-      src: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "School Building Exterior",
-      caption: "R.K. Public School Main Building - Sikandarpur, Basti"
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2Fefb05eacf01b4bdaad05af3ec3a6c4e9?format=webp&width=800",
+      alt: "R.K. Public School Admission Promotion",
+      caption: "R.K. Public School - Admission Open 2024"
     },
     {
       id: 2,
-      src: "https://images.unsplash.com/photo-1497486751825-1233686d5d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Smart Classroom",
-      caption: "Interactive Smart Classrooms with Modern Technology"
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F58556c622ec34048aa073781222d03d0?format=webp&width=800",
+      alt: "Happy Students with Teacher",
+      caption: "Our Happy Students with Faculty Members"
     },
     {
       id: 3,
-      src: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Science Laboratory",
-      caption: "Well-Equipped Science Laboratory for Hands-on Learning"
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F1d21f9df05e848439cee9859666e887d?format=webp&width=800",
+      alt: "Group Photo with Faculty",
+      caption: "Group Photo with Faculty and Students"
     },
     {
       id: 4,
-      src: "https://images.unsplash.com/photo-1544717297-fa95b6ee9643?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Computer Lab",
-      caption: "Computer Education Center with Latest Technology"
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F5cdcc8e4688240aeabdc484cc1d414d1?format=webp&width=800",
+      alt: "Computer Lab Session",
+      caption: "Computer Education in Progress"
     },
     {
       id: 5,
-      src: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Students Learning",
-      caption: "Students Engaged in Collaborative Learning"
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F61ec69b6e26543ce8e7f6db674f3d517?format=webp&width=800",
+      alt: "Morning Assembly",
+      caption: "Morning Assembly - Building Discipline and Values"
     },
     {
       id: 6,
-      src: "https://images.unsplash.com/photo-1559713714-5bb9ede8dd1e92ce33da2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "School Sports Ground",
-      caption: "Spacious Sports Ground for Cricket and Football"
-    },
-    {
-      id: 7,
-      src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "School Assembly",
-      caption: "Morning Assembly - Building Character and Discipline"
-    },
-    {
-      id: 8,
-      src: "https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "School Library",
-      caption: "Reading Corner - Fostering Love for Books"
-    },
-    {
-      id: 9,
-      src: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Cultural Event",
-      caption: "Annual Cultural Program - Showcasing Student Talents"
-    },
-    {
-      id: 10,
-      src: "https://images.unsplash.com/photo-1581726690015-c9861c200db8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Teachers Training",
-      caption: "Faculty Development and Training Programs"
-    },
-    {
-      id: 11,
-      src: "https://images.unsplash.com/photo-1544531585-bb8de94bb8ed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Award Ceremony",
-      caption: "Academic Excellence Awards - Recognizing Achievements"
-    },
-    {
-      id: 12,
-      src: "https://images.unsplash.com/photo-1551836022-8b2858c9c69b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "School Transport",
-      caption: "Safe and Reliable School Transport Service"
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2Ff0dd86c20b4e4b638e107e03db9e9fc2?format=webp&width=800",
+      alt: "School Assembly Line",
+      caption: "Students in Morning Assembly Formation"
     }
   ];
 
   const eventsPhotos = [
     {
+      id: 7,
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F7818f51370174c5a9469875fb143b5d4?format=webp&width=800",
+      alt: "Republic Day Celebration",
+      caption: "Republic Day Celebration with Cultural Program"
+    },
+    {
+      id: 8,
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F48d590e9fcb641229a36a5cebdc4a064?format=webp&width=800",
+      alt: "Independence Day March",
+      caption: "Independence Day Parade by Students"
+    },
+    {
+      id: 9,
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2Fff3f60e7802d4567808767a5455a08b9?format=webp&width=800",
+      alt: "Cultural Performance",
+      caption: "Students Performing Cultural Dance"
+    },
+    {
+      id: 10,
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F2dd5ab5c245c439e8f781415a447782c?format=webp&width=800",
+      alt: "Stage Performance",
+      caption: "Annual Cultural Program Stage Performance"
+    },
+    {
+      id: 11,
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F00294ec72944479397da553f1a809cde?format=webp&width=800",
+      alt: "Award Distribution",
+      caption: "Award Distribution Ceremony"
+    },
+    {
+      id: 12,
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F20e8363911fd44dd8cafdd87ed9db753?format=webp&width=800",
+      alt: "Group Achievement Photo",
+      caption: "Students and Faculty Achievement Celebration"
+    },
+    {
       id: 13,
-      src: "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Independence Day",
-      caption: "Independence Day Celebration 2024"
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F4e2ace48953e4ecbbd5923da4b91a024?format=webp&width=800",
+      alt: "Traditional Costume Performance",
+      caption: "Student in Traditional Costume Performance"
     },
     {
       id: 14,
-      src: "https://images.unsplash.com/photo-1526047932273-341f2a7631f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Science Exhibition",
-      caption: "Annual Science Exhibition - Student Projects"
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2Fd2e026b746b14799b9a0f500ca503414?format=webp&width=800",
+      alt: "Drama Performance",
+      caption: "Students Performing Drama on Stage"
     },
     {
       id: 15,
-      src: "https://images.unsplash.com/photo-1517971071642-c2b809b3dea7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Sports Day",
-      caption: "Annual Sports Day - Promoting Physical Fitness"
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2Ff8802f20cf404bdea00eba480f48051e?format=webp&width=800",
+      alt: "Krishna Costume Performance",
+      caption: "Cultural Performance - Krishna Theme"
     },
     {
       id: 16,
-      src: "https://images.unsplash.com/photo-1533749047139-189de3cf06d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-      alt: "Parent Teacher Meeting",
-      caption: "Parent-Teacher Interactions for Student Progress"
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2Ff3c57a83ad794e6594abc9ca0967308b?format=webp&width=800",
+      alt: "Annual Function Group Photo",
+      caption: "Annual Function - Students and Faculty Group Photo"
+    },
+    {
+      id: 17,
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F2bd94b9e3ec8439a99f9ecce5817e6db?format=webp&width=800",
+      alt: "Character Play Performance",
+      caption: "Students in Character Play Performance"
+    },
+    {
+      id: 18,
+      src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2Faa4f03aed7e040a6bb13e3b231d03e02?format=webp&width=800",
+      alt: "Students Walking Together",
+      caption: "Students Walking Together - Unity and Friendship"
     }
   ];
 
@@ -115,25 +127,6 @@ const Gallery = () => {
         </div>
       </div>
       
-      <div className="photo-instructions">
-        <div className="container">
-          <div className="instruction-card">
-            <h3>📸 Real School Photos Coming Soon!</h3>
-            <p>
-              We're currently updating our gallery with authentic photos from our Facebook page. 
-              These placeholder images showcase the type of activities and facilities at R.K. Public School.
-            </p>
-            <a 
-              href="https://m.facebook.com/profile.php?id=100064106820772" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="facebook-link"
-            >
-              Visit Our Facebook Page 📘
-            </a>
-          </div>
-        </div>
-      </div>
 
       <SchoolGallery images={schoolPhotos} title="Campus & Facilities" />
       <SchoolGallery images={eventsPhotos} title="Events & Activities" />
