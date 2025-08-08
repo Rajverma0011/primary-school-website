@@ -47,74 +47,74 @@ const Gallery = () => {
     {
       id: 7,
       src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F7818f51370174c5a9469875fb143b5d4?format=webp&width=1600&quality=90",
-      alt: "Republic Day Celebration",
-      caption: "Republic Day Celebration with Cultural Program"
+      alt: "School Event Photo",
+      caption: "School Events"
     },
     {
       id: 8,
       src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F48d590e9fcb641229a36a5cebdc4a064?format=webp&width=1600&quality=90",
-      alt: "Independence Day March",
-      caption: "Independence Day Parade by Students"
+      alt: "School Event Photo",
+      caption: "School Events"
     },
     {
       id: 9,
       src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2Fff3f60e7802d4567808767a5455a08b9?format=webp&width=1600&quality=90",
-      alt: "Cultural Performance",
-      caption: "Students Performing Cultural Dance"
+      alt: "School Event Photo",
+      caption: "School Events"
     },
     {
       id: 10,
       src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F2dd5ab5c245c439e8f781415a447782c?format=webp&width=1600&quality=90",
-      alt: "Stage Performance",
-      caption: "Annual Cultural Program Stage Performance"
+      alt: "School Event Photo",
+      caption: "School Events"
     },
     {
       id: 11,
       src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F00294ec72944479397da553f1a809cde?format=webp&width=1600&quality=90",
-      alt: "Award Distribution",
-      caption: "Award Distribution Ceremony"
+      alt: "School Event Photo",
+      caption: "School Events"
     },
     {
       id: 12,
       src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F20e8363911fd44dd8cafdd87ed9db753?format=webp&width=1600&quality=90",
-      alt: "Group Achievement Photo",
-      caption: "Students and Faculty Achievement Celebration"
+      alt: "School Event Photo",
+      caption: "School Events"
     },
     {
       id: 13,
       src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F4e2ace48953e4ecbbd5923da4b91a024?format=webp&width=1600&quality=90",
-      alt: "Traditional Costume Performance",
-      caption: "Student in Traditional Costume Performance"
+      alt: "School Event Photo",
+      caption: "School Events"
     },
     {
       id: 14,
       src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2Fd2e026b746b14799b9a0f500ca503414?format=webp&width=1600&quality=90",
-      alt: "Drama Performance",
-      caption: "Students Performing Drama on Stage"
+      alt: "School Event Photo",
+      caption: "School Events"
     },
     {
       id: 15,
       src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2Ff8802f20cf404bdea00eba480f48051e?format=webp&width=1600&quality=90",
-      alt: "Krishna Costume Performance",
-      caption: "Cultural Performance - Krishna Theme"
+      alt: "School Event Photo",
+      caption: "School Events"
     },
     {
       id: 16,
       src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2Ff3c57a83ad794e6594abc9ca0967308b?format=webp&width=1600&quality=90",
-      alt: "Annual Function Group Photo",
-      caption: "Annual Function - Students and Faculty Group Photo"
+      alt: "School Event Photo",
+      caption: "School Events"
     },
     {
       id: 17,
       src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2F2bd94b9e3ec8439a99f9ecce5817e6db?format=webp&width=1600&quality=90",
-      alt: "Character Play Performance",
-      caption: "Students in Character Play Performance"
+      alt: "School Event Photo",
+      caption: "School Events"
     },
     {
       id: 18,
       src: "https://cdn.builder.io/api/v1/image/assets%2Fb2db859bd0fa41d8ac710252845dd01d%2Faa4f03aed7e040a6bb13e3b231d03e02?format=webp&width=1600&quality=90",
-      alt: "Students Walking Together",
-      caption: "Students Walking Together - Unity and Friendship"
+      alt: "School Event Photo",
+      caption: "School Events"
     }
   ];
 
