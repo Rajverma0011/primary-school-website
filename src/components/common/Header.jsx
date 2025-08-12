@@ -64,6 +64,14 @@ const Header = () => {
                 <span className="nav-text">Gallery</span>
               </Link>
               <Link
+                to="/careers"
+                className={`nav-link ${isActiveLink('/careers') ? 'active' : ''}`}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <span className="nav-icon">💼</span>
+                <span className="nav-text">Careers</span>
+              </Link>
+              <Link
                 to="/contact"
                 className={`nav-link ${isActiveLink('/contact') ? 'active' : ''}`}
                 onClick={() => setIsMobileMenuOpen(false)}
