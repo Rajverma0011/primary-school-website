@@ -26,27 +26,25 @@ const ContactForm = () => {
     setStatus('');
 
     try {
-      // Send only the data expected by Google Apps Script (name, email, message)
-      const submissionData = {
-        name: formData.name,
-        email: formData.email,
-        message: `${formData.message}\n\nPhone: ${formData.phonenumber}`
-      };
+      // Create form data for Google Apps Script compatibility
+      const formDataToSend = new FormData();
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('message', `${formData.message}\n\nPhone: ${formData.phonenumber}`);
+      formDataToSend.append('timestamp', new Date().toLocaleString('en-IN', {timeZone: 'Asia/Kolkata'}));
 
+      // Use no-cors mode to avoid CORS issues with Google Apps Script
       const response = await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(submissionData)
+        mode: 'no-cors',
+        body: formDataToSend
       });
 
-      if (response.ok) {
-        setStatus('✅ Thank you for contacting R.K. Public School! We have received your inquiry and will get back to you soon.');
-        setFormData({ name: '', email: '', phonenumber: '', message: '' });
-      } else {
-        throw new Error('Failed to submit form');
-      }
+      // Since we're using no-cors mode, we can't check response status
+      // Assume success if no error is thrown
+      setStatus('✅ Thank you for contacting R.K. Public School! We have received your inquiry and will get back to you soon.');
+      setFormData({ name: '', email: '', phonenumber: '', message: '' });
+
     } catch (error) {
       console.error('Error submitting form:', error);
       setStatus(
