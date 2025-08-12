@@ -21,7 +21,7 @@ const WhyChooseUs = () => (
           <p>20 well-equipped classrooms, smart learning technology, science lab, computer lab, and safe transport service.</p>
         </div>
         <div className="feature-card">
-          <div className="feature-icon">👨���🏫</div>
+          <div className="feature-icon">👨‍🏫</div>
           <h3>Qualified Faculty</h3>
           <p>18+ experienced teachers with B.Ed/M.Ed qualifications led by Principal K.M. Shukla, committed to student success.</p>
         </div>
@@ -34,7 +34,7 @@ const QuickActions = () => (
   <section className="quick-actions section" style={{ background: 'var(--bg-secondary)' }}>
     <div className="container">
       <h2 className="section-title">Quick Access</h2>
-      <div className="grid grid-2">
+      <div className="grid grid-3">
         <div className="action-card admission-card">
           <div className="action-content">
             <h3>Admissions Open</h3>
@@ -43,13 +43,21 @@ const QuickActions = () => (
           </div>
           <div className="action-icon">🎓</div>
         </div>
+        <div className="action-card careers-card">
+          <div className="action-content">
+            <h3>Join Our Team</h3>
+            <p>Passionate about teaching? We're looking for qualified educators to join our growing family of teachers.</p>
+            <a href="/careers" className="action-btn accent">Apply for Teaching</a>
+          </div>
+          <div className="action-icon">💼</div>
+        </div>
         <div className="action-card contact-card">
           <div className="action-content">
             <h3>Visit Our Campus</h3>
             <p>Located in Sikandarpur, Basti. Visit us Monday-Saturday, 8:00 AM to 2:00 PM to explore our facilities.</p>
             <a href="/contact" className="action-btn secondary">Contact Us</a>
           </div>
-          <div className="action-icon">��</div>
+          <div className="action-icon">🏫</div>
         </div>
       </div>
     </div>
