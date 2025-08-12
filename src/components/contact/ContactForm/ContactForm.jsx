@@ -26,31 +26,31 @@ const ContactForm = () => {
     setStatus('');
 
     try {
+      // Send only the data expected by Google Apps Script (name, email, message)
       const submissionData = {
-        ...formData,
-        timestamp: new Date().toLocaleString('en-IN', {
-          timeZone: 'Asia/Kolkata'
-        }),
-        source: 'R.K. Public School Website'
+        name: formData.name,
+        email: formData.email,
+        message: `${formData.message}\n\nPhone: ${formData.phonenumber}`
       };
 
-      const formDataToSend = new URLSearchParams();
-      for (let key in submissionData) {
-        formDataToSend.append(key, submissionData[key]);
-      }
-
-      await fetch(GOOGLE_SCRIPT_URL, {
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
-        body: formDataToSend,
-        mode: 'no-cors'
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(submissionData)
       });
 
-      setStatus('✅ Thank you! We have received your message.');
-      setFormData({ name: '', email: '', phonenumber: '', message: '' });
+      if (response.ok) {
+        setStatus('✅ Thank you for contacting R.K. Public School! We have received your inquiry and will get back to you soon.');
+        setFormData({ name: '', email: '', phonenumber: '', message: '' });
+      } else {
+        throw new Error('Failed to submit form');
+      }
     } catch (error) {
-      console.error(error);
+      console.error('Error submitting form:', error);
       setStatus(
-        '❌ Error submitting form. Please try again or call 8400006780.'
+        '❌ There was an error submitting your message. Please try again or call us at 8400006780.'
       );
     } finally {
       setIsSubmitting(false);
