@@ -9,6 +9,7 @@ import Contact from './pages/Contact.jsx';
 import Academics from './pages/Academics.jsx';
 import Admissions from './pages/Admissions.jsx';
 import Gallery from './pages/Gallery.jsx';
+import Careers from './pages/Careers.jsx';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/academics" element={<Academics />} />
           <Route path="/gallery" element={<Gallery />} />
+          <Route path="/careers" element={<Careers />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/admissions" element={<Admissions />} />
         </Routes>
