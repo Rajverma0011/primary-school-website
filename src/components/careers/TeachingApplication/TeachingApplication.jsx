@@ -65,55 +65,52 @@ const TeachingApplication = () => {
     setSubmitStatus('');
 
     try {
-      // Prepare form data for submission as JSON
-      const submissionData = {
-        type: 'teaching_application',
-        fullName: formData.fullName,
-        email: formData.email,
-        phone: formData.phone,
-        position: formData.position,
-        qualification: formData.qualification,
-        experience: formData.experience,
-        subjects: formData.subjects,
-        currentSalary: formData.currentSalary,
-        expectedSalary: formData.expectedSalary,
-        availableFrom: formData.availableFrom,
-        coverLetter: formData.coverLetter,
-        references: formData.references
-      };
+      // Create FormData for better Google Apps Script compatibility
+      const formDataToSend = new FormData();
+      formDataToSend.append('type', 'teaching_application');
+      formDataToSend.append('fullName', formData.fullName);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('phone', formData.phone);
+      formDataToSend.append('position', formData.position);
+      formDataToSend.append('qualification', formData.qualification);
+      formDataToSend.append('experience', formData.experience);
+      formDataToSend.append('subjects', formData.subjects);
+      formDataToSend.append('currentSalary', formData.currentSalary);
+      formDataToSend.append('expectedSalary', formData.expectedSalary);
+      formDataToSend.append('availableFrom', formData.availableFrom);
+      formDataToSend.append('coverLetter', formData.coverLetter);
+      formDataToSend.append('references', formData.references);
+      formDataToSend.append('timestamp', new Date().toLocaleString('en-IN', {timeZone: 'Asia/Kolkata'}));
 
+      // Use no-cors mode to avoid CORS issues
       const response = await fetch('https://script.google.com/macros/s/AKfycbxoqjugbBYBj2mXWT-LghvsIOkbgMt3rHoMdK9Q34MpHqBYuYgrXo19sWPJpQujdQ2C/exec', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(submissionData)
+        mode: 'no-cors',
+        body: formDataToSend
       });
 
-      if (response.ok) {
-        setSubmitStatus('success');
-        // Reset form
-        setFormData({
-          fullName: '',
-          email: '',
-          phone: '',
-          position: '',
-          qualification: '',
-          experience: '',
-          subjects: '',
-          currentSalary: '',
-          expectedSalary: '',
-          availableFrom: '',
-          resume: null,
-          coverLetter: '',
-          references: ''
-        });
-        // Reset file input
-        const fileInput = document.querySelector('input[type="file"]');
-        if (fileInput) fileInput.value = '';
-      } else {
-        setSubmitStatus('error');
-      }
+      // Since we're using no-cors mode, assume success if no error is thrown
+      setSubmitStatus('success');
+      // Reset form
+      setFormData({
+        fullName: '',
+        email: '',
+        phone: '',
+        position: '',
+        qualification: '',
+        experience: '',
+        subjects: '',
+        currentSalary: '',
+        expectedSalary: '',
+        availableFrom: '',
+        resume: null,
+        coverLetter: '',
+        references: ''
+      });
+      // Reset file input
+      const fileInput = document.querySelector('input[type="file"]');
+      if (fileInput) fileInput.value = '';
+
     } catch (error) {
       console.error('Error submitting application:', error);
       setSubmitStatus('error');
