@@ -65,8 +65,9 @@ const TeachingApplication = () => {
     setSubmitStatus('');
 
     try {
-      // Prepare form data for submission
+      // Prepare form data for submission as JSON
       const submissionData = {
+        type: 'teaching_application',
         fullName: formData.fullName,
         email: formData.email,
         phone: formData.phone,
@@ -78,24 +79,15 @@ const TeachingApplication = () => {
         expectedSalary: formData.expectedSalary,
         availableFrom: formData.availableFrom,
         coverLetter: formData.coverLetter,
-        references: formData.references,
-        timestamp: new Date().toLocaleString('en-IN', {timeZone: 'Asia/Kolkata'}),
-        source: 'R.K. Public School - Teaching Application',
-        type: 'Teaching Application'
+        references: formData.references
       };
-
-      // Convert to URLSearchParams for proper form submission
-      const params = new URLSearchParams();
-      Object.keys(submissionData).forEach(key => {
-        params.append(key, submissionData[key]);
-      });
 
       const response = await fetch('https://script.google.com/macros/s/AKfycbxoqjugbBYBj2mXWT-LghvsIOkbgMt3rHoMdK9Q34MpHqBYuYgrXo19sWPJpQujdQ2C/exec', {
         method: 'POST',
-        body: params,
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
+          'Content-Type': 'application/json',
         },
+        body: JSON.stringify(submissionData)
       });
 
       if (response.ok) {
