@@ -147,12 +147,13 @@
 }
 
 .school-name {
-  font-size: 1.9rem;
-  font-weight: 800;
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
   color: var(--primary-color);
   margin: 0;
   line-height: 1.1;
-  text-shadow: 0 2px 4px rgba(15, 76, 117, 0.1);
+  text-shadow: 0 2px 4px rgba(0, 51, 102, 0.1);
 }
 
 .school-tagline {
@@ -164,10 +165,11 @@
 }
 
 .school-location {
-  font-size: 0.75rem;
-  color: var(--text-muted);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
   margin: 0;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .main-navigation {
