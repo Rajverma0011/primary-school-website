@@ -25,8 +25,7 @@ const Header = () => {
               </div>
               <div className="school-branding">
                 <h1 className="school-name">R.K. Public School</h1>
-                <p className="school-tagline">Education for Enlightenment Since 2012</p>
-                <p className="school-location">Basti, Uttar Pradesh</p>
+                <p className="school-location">Basti, UP</p>
               </div>
             </Link>
 

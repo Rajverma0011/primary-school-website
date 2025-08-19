@@ -13,15 +13,16 @@ const Hero = () => {
 
         <div className="hero-container">
           <div className="hero-content-center">
-            <div className="hero-badge">
-              <span className="badge-icon">🎓</span>
-              <span>Established 2012 • Education for Enlightenment</span>
+            <div className="hero-school-name">
+              <h1 className="hero-school-title">R.K. Public School</h1>
+              <p className="hero-school-subtitle">Education for Enlightenment Since 2012</p>
+              <p className="hero-school-location">Sikandarpur, Basti, Uttar Pradesh</p>
             </div>
 
-            <h1 className="hero-headline">
+            <h2 className="hero-headline">
               Nurturing Tomorrow's
               <span className="headline-highlight"> Leaders</span>
-            </h1>
+            </h2>
 
             <p className="hero-description">
               At R.K. Public School, Basti, we provide quality CBSE education from Pre-Nursery to Class 8.
