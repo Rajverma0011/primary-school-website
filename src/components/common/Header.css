@@ -127,11 +127,11 @@
 }
 
 .school-logo {
-  height: 70px;
+  height: 60px;
   width: auto;
   border-radius: 12px;
   box-shadow: var(--shadow-medium);
-  border: 3px solid var(--bg-tertiary);
+  border: 2px solid var(--secondary-color);
   transition: all 0.3s ease;
 }
 
