@@ -68,7 +68,6 @@ const Home = () => {
     <div className="home-page">
       <Hero />
       <WhyChooseUs />
-      <SchoolLife />
       <YouTubeShowcase />
       <NewsSection />
       <QuickActions />
