@@ -1,7 +1,6 @@
 import React from 'react';
 import Hero from '../components/home/Hero.jsx';
 import NewsSection from '../components/home/NewsSection/NewsSection.jsx';
-import SchoolLife from '../components/home/SchoolLife/SchoolLife.jsx';
 import YouTubeShowcase from '../components/home/YouTubeShowcase/YouTubeShowcase.jsx';
 import './Home.css';
 
