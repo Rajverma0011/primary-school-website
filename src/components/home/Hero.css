@@ -59,8 +59,44 @@
 .hero-content-center {
   text-align: center;
   color: var(--text-light);
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
+}
+
+/* School Branding in Hero */
+.hero-school-name {
+  margin-bottom: 3rem;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: var(--shadow-large);
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--secondary-color);
+}
+
+.hero-school-title {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 900;
+  color: var(--primary-color);
+  margin-bottom: 0.75rem;
+  text-shadow: 2px 2px 4px rgba(0, 51, 102, 0.1);
+}
+
+.hero-school-subtitle {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--secondary-color);
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+.hero-school-location {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  font-weight: 600;
 }
 
 .hero-badge {
@@ -82,17 +118,19 @@
 }
 
 .hero-headline {
+  font-family: var(--font-heading);
   font-size: 3.5rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.1;
   margin-bottom: 1.5rem;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: var(--text-light);
 }
 
 .headline-highlight {
-  color: var(--accent-color);
-  display: block;
-  text-shadow: 0 4px 8px rgba(230, 126, 34, 0.4);
+  color: var(--secondary-color);
+  font-weight: 900;
+  text-shadow: 0 4px 8px rgba(255, 215, 0, 0.6);
 }
 
 .hero-description {
