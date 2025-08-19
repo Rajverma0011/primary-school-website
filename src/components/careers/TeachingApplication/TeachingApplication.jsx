@@ -65,25 +65,30 @@ const TeachingApplication = () => {
     setSubmitStatus('');
 
     try {
-      // Create FormData for better Google Apps Script compatibility
+      // Create FormData for Google Apps Script compatibility
       const formDataToSend = new FormData();
-      formDataToSend.append('type', 'teaching_application');
-      formDataToSend.append('fullName', formData.fullName);
+      formDataToSend.append('name', formData.fullName);
       formDataToSend.append('email', formData.email);
       formDataToSend.append('phone', formData.phone);
-      formDataToSend.append('position', formData.position);
-      formDataToSend.append('qualification', formData.qualification);
-      formDataToSend.append('experience', formData.experience);
-      formDataToSend.append('subjects', formData.subjects);
-      formDataToSend.append('currentSalary', formData.currentSalary);
-      formDataToSend.append('expectedSalary', formData.expectedSalary);
-      formDataToSend.append('availableFrom', formData.availableFrom);
-      formDataToSend.append('coverLetter', formData.coverLetter);
-      formDataToSend.append('references', formData.references);
-      formDataToSend.append('timestamp', new Date().toLocaleString('en-IN', {timeZone: 'Asia/Kolkata'}));
+      formDataToSend.append('message', `TEACHING APPLICATION
+
+Position Applied For: ${formData.position}
+Qualification: ${formData.qualification}
+Experience: ${formData.experience}
+Subjects: ${formData.subjects}
+Current Salary: ${formData.currentSalary}
+Expected Salary: ${formData.expectedSalary}
+Available From: ${formData.availableFrom}
+
+Cover Letter:
+${formData.coverLetter}
+
+References:
+${formData.references}`);
+      formDataToSend.append('type', 'Teaching Application');
 
       // Use no-cors mode to avoid CORS issues
-      const response = await fetch('https://script.google.com/macros/s/AKfycbxoqjugbBYBj2mXWT-LghvsIOkbgMt3rHoMdK9Q34MpHqBYuYgrXo19sWPJpQujdQ2C/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbzwG6ncPJMQS02rSrDcNHE_KJvp7mLLCmlAxbdf6Ucmm7_DDap0ol-ORSb00UheJ_8F/exec', {
         method: 'POST',
         mode: 'no-cors',
         body: formDataToSend
