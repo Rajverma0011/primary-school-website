@@ -33,7 +33,7 @@ const Hero = () => {
             <div className="hero-cta-section">
               <Link to="/admissions" className="cta-primary">
                 <span className="cta-icon">📝</span>
-                Apply for Admission 2024
+                Apply for Admission 
               </Link>
               <Link to="/about" className="cta-secondary">
                 <span className="cta-icon">ℹ️</span>
