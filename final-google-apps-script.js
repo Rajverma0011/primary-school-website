@@ -2,15 +2,15 @@ function doPost(e) {
   try {
     var SHEET_ID = '1bkmRNswujvbKazCcHKn29Mag2SPl4g0e0z2m3AsmlXk';
     var spreadsheet = SpreadsheetApp.openById(SHEET_ID);
-    var sheet = spreadsheet.getActiveSheet();
-
-    // Ensure proper headers are set up
-    ensureHeaders(sheet);
 
     // Check if this is a teaching application or contact form
     var formType = e.parameter.type || 'contact_form';
 
+    var sheet;
     if (formType === 'teaching_application') {
+      // Get or create Teaching Applications sheet
+      sheet = getOrCreateSheet(spreadsheet, 'Teaching Applications');
+      ensureTeachingHeaders(sheet);
       // Handle teaching application
       var fullName = e.parameter.fullName || '';
       var email = e.parameter.email || '';
