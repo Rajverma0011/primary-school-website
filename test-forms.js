@@ -1,5 +1,5 @@
 // Test script for contact form and teaching application
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzwG6ncPJMQS02rSrDcNHE_KJvp7mLLCmlAxbdf6Ucmm7_DDap0ol-ORSb00UheJ_8F/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz4vNM2As9LA3OhNgx5Vj51qvkw8XWbZitF39XkLfY5HNzwUZjiGU0SSlrH_J1gz3Eldw/exec';
 
 async function testContactForm() {
     console.log('\n🧪 Testing Contact Form...');
@@ -97,8 +97,8 @@ async function testTeachingApplication() {
 
 async function runAllTests() {
     console.log('🚀 Starting Form Tests...');
-    console.log('📋 Google Sheet ID: 1rXtU7FvxnkW7WUyvfhbru7mE8G0fCyGwBdYE3rI9NE0');
-    console.log('🔗 Check results at: https://docs.google.com/spreadsheets/d/1rXtU7FvxnkW7WUyvfhbru7mE8G0fCyGwBdYE3rI9NE0');
+    console.log('📋 Google Sheet ID: 1bkmRNswujvbKazCcHKn29Mag2SPl4g0e0z2m3AsmlXk');
+    console.log('🔗 Check results at: https://docs.google.com/spreadsheets/d/1bkmRNswujvbKazCcHKn29Mag2SPl4g0e0z2m3AsmlXk');
     
     await testContactForm();
     await testTeachingApplication();
