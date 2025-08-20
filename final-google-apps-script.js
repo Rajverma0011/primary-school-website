@@ -93,20 +93,22 @@ Please review the application in the Google Sheet.
       // Handle contact form (default)
       var name = e.parameter.name || '';
       var email = e.parameter.email || '';
+      var phone = e.parameter.phone || '';
       var message = e.parameter.message || '';
       var timestamp = e.parameter.timestamp || new Date().toString();
-      
+
       // Add headers if this is the first row
       if (sheet.getLastRow() === 0) {
-        sheet.appendRow(['Timestamp', 'Type', 'Name', 'Email', 'Message']);
+        sheet.appendRow(['Timestamp', 'Type', 'Name', 'Email', 'Phone', 'Message']);
       }
-      
+
       // Add the contact form data
       sheet.appendRow([
         new Date(),
         'Contact Form',
         name,
         email,
+        phone,
         message
       ]);
       
@@ -120,6 +122,7 @@ New contact form submission received:
 
 Name: ${name}
 Email: ${email}
+Phone: ${phone}
 Message: ${message}
 Submitted: ${timestamp}
 
