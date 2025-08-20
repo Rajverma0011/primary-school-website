@@ -14,21 +14,29 @@ import Careers from './pages/Careers.jsx';
 
 function App() {
   return (
-    <div className="main-container">
-      <Header />
-      <main className="main-content">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/academics" element={<Academics />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/careers" element={<Careers />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/admissions" element={<Admissions />} />
-        </Routes>
-      </main>
-      <Footer />
-    </div>
+    <ErrorBoundary>
+      <div className="main-container">
+        <ErrorBoundary>
+          <Header />
+        </ErrorBoundary>
+        <main className="main-content">
+          <ErrorBoundary>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/academics" element={<Academics />} />
+              <Route path="/gallery" element={<Gallery />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/admissions" element={<Admissions />} />
+            </Routes>
+          </ErrorBoundary>
+        </main>
+        <ErrorBoundary>
+          <Footer />
+        </ErrorBoundary>
+      </div>
+    </ErrorBoundary>
   );
 }
 
