@@ -1,6 +1,8 @@
 function doPost(e) {
   try {
-    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    var SHEET_ID = '1rXtU7FvxnkW7WUyvfhbru7mE8G0fCyGwBdYE3rI9NE0';
+    var spreadsheet = SpreadsheetApp.openById(SHEET_ID);
+    var sheet = spreadsheet.getActiveSheet();
     
     // Check if this is a teaching application or contact form
     var formType = e.parameter.type || 'contact_form';
