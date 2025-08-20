@@ -130,30 +130,49 @@ Please respond to this inquiry as soon as possible.
   }
 }
 
-function ensureHeaders(sheet) {
-  // Check if proper headers exist
+function getOrCreateSheet(spreadsheet, sheetName) {
+  var sheet = spreadsheet.getSheetByName(sheetName);
+  if (!sheet) {
+    sheet = spreadsheet.insertSheet(sheetName);
+  }
+  return sheet;
+}
+
+function ensureContactHeaders(sheet) {
   var lastRow = sheet.getLastRow();
-  var expectedHeaders = [
-    'Timestamp', 'Type', 'Name/Full Name', 'Email', 'Phone', 'Message',
-    'Position', 'Qualification', 'Experience', 'Subjects', 'Current Salary',
+  var contactHeaders = [
+    'Timestamp', 'Type', 'Name', 'Email', 'Phone', 'Message'
+  ];
+
+  if (lastRow === 0) {
+    // Sheet is empty, add headers
+    sheet.appendRow(contactHeaders);
+
+    // Format header row
+    var headerRange = sheet.getRange(1, 1, 1, contactHeaders.length);
+    headerRange.setFontWeight('bold');
+    headerRange.setBackground('#34a853');
+    headerRange.setFontColor('white');
+  }
+}
+
+function ensureTeachingHeaders(sheet) {
+  var lastRow = sheet.getLastRow();
+  var teachingHeaders = [
+    'Timestamp', 'Type', 'Full Name', 'Email', 'Phone', 'Position',
+    'Qualification', 'Experience', 'Subjects', 'Current Salary',
     'Expected Salary', 'Available From', 'Cover Letter', 'References'
   ];
 
   if (lastRow === 0) {
     // Sheet is empty, add headers
-    sheet.appendRow(expectedHeaders);
-  } else {
-    // Check if first row has correct headers
-    var firstRow = sheet.getRange(1, 1, 1, expectedHeaders.length).getValues()[0];
-    var hasCorrectHeaders = expectedHeaders.every((header, index) =>
-      firstRow[index] && firstRow[index].toString().includes(header.split('/')[0])
-    );
+    sheet.appendRow(teachingHeaders);
 
-    if (!hasCorrectHeaders) {
-      // Insert headers at the top
-      sheet.insertRowBefore(1);
-      sheet.getRange(1, 1, 1, expectedHeaders.length).setValues([expectedHeaders]);
-    }
+    // Format header row
+    var headerRange = sheet.getRange(1, 1, 1, teachingHeaders.length);
+    headerRange.setFontWeight('bold');
+    headerRange.setBackground('#4285f4');
+    headerRange.setFontColor('white');
   }
 }
 
