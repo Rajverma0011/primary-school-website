@@ -176,27 +176,34 @@ function ensureTeachingHeaders(sheet) {
   }
 }
 
-// Manual function to set up headers (run this once if needed)
+// Manual function to set up both sheets (run this once if needed)
 function setupHeaders() {
   var SHEET_ID = '1bkmRNswujvbKazCcHKn29Mag2SPl4g0e0z2m3AsmlXk';
   var spreadsheet = SpreadsheetApp.openById(SHEET_ID);
-  var sheet = spreadsheet.getActiveSheet();
 
-  // Clear existing content and set up fresh headers
-  sheet.clear();
-  var headers = [
-    'Timestamp', 'Type', 'Name/Full Name', 'Email', 'Phone', 'Message',
-    'Position', 'Qualification', 'Experience', 'Subjects', 'Current Salary',
+  // Set up Contact Forms sheet
+  var contactSheet = getOrCreateSheet(spreadsheet, 'Contact Forms');
+  contactSheet.clear();
+  var contactHeaders = ['Timestamp', 'Type', 'Name', 'Email', 'Phone', 'Message'];
+  contactSheet.appendRow(contactHeaders);
+  var contactHeaderRange = contactSheet.getRange(1, 1, 1, contactHeaders.length);
+  contactHeaderRange.setFontWeight('bold');
+  contactHeaderRange.setBackground('#34a853');
+  contactHeaderRange.setFontColor('white');
+
+  // Set up Teaching Applications sheet
+  var teachingSheet = getOrCreateSheet(spreadsheet, 'Teaching Applications');
+  teachingSheet.clear();
+  var teachingHeaders = [
+    'Timestamp', 'Type', 'Full Name', 'Email', 'Phone', 'Position',
+    'Qualification', 'Experience', 'Subjects', 'Current Salary',
     'Expected Salary', 'Available From', 'Cover Letter', 'References'
   ];
+  teachingSheet.appendRow(teachingHeaders);
+  var teachingHeaderRange = teachingSheet.getRange(1, 1, 1, teachingHeaders.length);
+  teachingHeaderRange.setFontWeight('bold');
+  teachingHeaderRange.setBackground('#4285f4');
+  teachingHeaderRange.setFontColor('white');
 
-  sheet.appendRow(headers);
-
-  // Format header row
-  var headerRange = sheet.getRange(1, 1, 1, headers.length);
-  headerRange.setFontWeight('bold');
-  headerRange.setBackground('#4285f4');
-  headerRange.setFontColor('white');
-
-  return 'Headers set up successfully!';
+  return 'Both sheets set up successfully!\nContact Forms: Green headers\nTeaching Applications: Blue headers';
 }
