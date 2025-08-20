@@ -1,6 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
+import ErrorBoundary from './components/ErrorBoundary.jsx';
 import Header from './components/common/Header.jsx';
 import Footer from './components/common/Footer/Footer.jsx';
 import Home from './pages/Home.jsx';
