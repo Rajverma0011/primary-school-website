@@ -82,7 +82,7 @@ const TeachingApplication = () => {
       formDataToSend.append('type', 'teaching_application');
 
       // Use no-cors mode to avoid CORS issues
-      const response = await fetch('https://script.google.com/macros/s/AKfycbzwG6ncPJMQS02rSrDcNHE_KJvp7mLLCmlAxbdf6Ucmm7_DDap0ol-ORSb00UheJ_8F/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbz4vNM2As9LA3OhNgx5Vj51qvkw8XWbZitF39XkLfY5HNzwUZjiGU0SSlrH_J1gz3Eldw/exec', {
         method: 'POST',
         mode: 'no-cors',
         body: formDataToSend
@@ -396,7 +396,7 @@ const TeachingApplication = () => {
                 </>
               ) : (
                 <>
-                  <span className="submit-icon">����</span>
+                  <span className="submit-icon">📤</span>
                   <span>Submit Application</span>
                 </>
               )}
