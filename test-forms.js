@@ -1,5 +1,5 @@
 // Test script for contact form and teaching application
-const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz4vNM2As9LA3OhNgx5Vj51qvkw8XWbZitF39XkLfY5HNzwUZjiGU0SSlrH_J1gz3Eldw/exec';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyai9isLfpkKvfU38tAimep8HfhMsGncA0_eBJcQx_p9133VBbhbfd9G2oGgpQLbAdlQg/exec';
 
 async function testContactForm() {
     console.log('\n🧪 Testing Contact Form...');
