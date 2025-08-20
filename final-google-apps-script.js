@@ -126,3 +126,30 @@ Please respond to this inquiry as soon as possible.
       .setMimeType(ContentService.MimeType.JSON);
   }
 }
+
+function ensureHeaders(sheet) {
+  // Check if proper headers exist
+  var lastRow = sheet.getLastRow();
+  var expectedHeaders = [
+    'Timestamp', 'Type', 'Name/Full Name', 'Email', 'Phone', 'Message',
+    'Position', 'Qualification', 'Experience', 'Subjects', 'Current Salary',
+    'Expected Salary', 'Available From', 'Cover Letter', 'References'
+  ];
+
+  if (lastRow === 0) {
+    // Sheet is empty, add headers
+    sheet.appendRow(expectedHeaders);
+  } else {
+    // Check if first row has correct headers
+    var firstRow = sheet.getRange(1, 1, 1, expectedHeaders.length).getValues()[0];
+    var hasCorrectHeaders = expectedHeaders.every((header, index) =>
+      firstRow[index] && firstRow[index].toString().includes(header.split('/')[0])
+    );
+
+    if (!hasCorrectHeaders) {
+      // Insert headers at the top
+      sheet.insertRowBefore(1);
+      sheet.getRange(1, 1, 1, expectedHeaders.length).setValues([expectedHeaders]);
+    }
+  }
+}
