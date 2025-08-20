@@ -79,6 +79,12 @@ const SchoolFeatures = () => (
 const About = () => {
   return (
     <div className="about-page">
+      <SEOHead
+        title="About Us - Founded 2012"
+        description="Learn about R.K. Public School Basti UP - Founded in 2012 by Late Ramphere Kurmi. CBSE school near Ayodhya with 18+ qualified teachers, modern facilities, and safe transport serving Sikandarpur, Basti community."
+        keywords="R.K. Public School history, CBSE school Basti founder, Late Ramphere Kurmi, school established 2012, Sikandarpur school, qualified teachers Basti, modern facilities school UP, education Basti district"
+        url="https://rkpublicschoolbasti.netlify.app/about"
+      />
       <div className="page-header">
         <div className="container">
           <h1>About R.K. Public School</h1>
