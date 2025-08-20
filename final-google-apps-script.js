@@ -153,3 +153,28 @@ function ensureHeaders(sheet) {
     }
   }
 }
+
+// Manual function to set up headers (run this once if needed)
+function setupHeaders() {
+  var SHEET_ID = '1rXtU7FvxnkW7WUyvfhbru7mE8G0fCyGwBdYE3rI9NE0';
+  var spreadsheet = SpreadsheetApp.openById(SHEET_ID);
+  var sheet = spreadsheet.getActiveSheet();
+
+  // Clear existing content and set up fresh headers
+  sheet.clear();
+  var headers = [
+    'Timestamp', 'Type', 'Name/Full Name', 'Email', 'Phone', 'Message',
+    'Position', 'Qualification', 'Experience', 'Subjects', 'Current Salary',
+    'Expected Salary', 'Available From', 'Cover Letter', 'References'
+  ];
+
+  sheet.appendRow(headers);
+
+  // Format header row
+  var headerRange = sheet.getRange(1, 1, 1, headers.length);
+  headerRange.setFontWeight('bold');
+  headerRange.setBackground('#4285f4');
+  headerRange.setFontColor('white');
+
+  return 'Headers set up successfully!';
+}
