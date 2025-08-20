@@ -13,7 +13,7 @@ const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   // Your Google Apps Script Web App URL
-  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzwG6ncPJMQS02rSrDcNHE_KJvp7mLLCmlAxbdf6Ucmm7_DDap0ol-ORSb00UheJ_8F/exec';
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz4vNM2As9LA3OhNgx5Vj51qvkw8XWbZitF39XkLfY5HNzwUZjiGU0SSlrH_J1gz3Eldw/exec';
 
   const handleChange = (e) => {
     const { name, value } = e.target;
