@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Testing Page</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ccc; }
+        button { padding: 10px 20px; margin: 10px; background: #007cba; color: white; border: none; cursor: pointer; }
+        .log { background: #f5f5f5; padding: 10px; margin: 10px 0; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <h1>Form Testing Automation</h1>
+    
+    <div class="test-section">
+        <h2>Test Contact Form</h2>
+        <button onclick="testContactForm()">Test Contact Form</button>
+        <div id="contactLog" class="log"></div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test Teaching Application</h2>
+        <button onclick="testTeachingApplication()">Test Teaching Application</button>
+        <div id="teachingLog" class="log"></div>
+    </div>
+
+    <script>
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzwG6ncPJMQS02rSrDcNHE_KJvp7mLLCmlAxbdf6Ucmm7_DDap0ol-ORSb00UheJ_8F/exec';
+
+        function log(elementId, message) {
+            const logElement = document.getElementById(elementId);
+            logElement.innerHTML += new Date().toLocaleTimeString() + ': ' + message + '<br>';
+        }
+
+        async function testContactForm() {
+            log('contactLog', 'Testing Contact Form...');
+            
+            const formData = new FormData();
+            formData.append('name', 'Test User ' + Math.floor(Math.random() * 1000));
+            formData.append('email', 'test' + Math.floor(Math.random() * 1000) + '@example.com');
+            formData.append('phone', '98765' + Math.floor(Math.random() * 10000));
+            formData.append('message', 'This is a test message sent on ' + new Date().toLocaleString());
+            formData.append('type', 'contact_form');
+
+            log('contactLog', 'Form data prepared:');
+            log('contactLog', '- Name: ' + formData.get('name'));
+            log('contactLog', '- Email: ' + formData.get('email'));
+            log('contactLog', '- Phone: ' + formData.get('phone'));
+            log('contactLog', '- Message: ' + formData.get('message'));
+            log('contactLog', '- Type: ' + formData.get('type'));
+
+            try {
+                log('contactLog', 'Submitting to: ' + GOOGLE_SCRIPT_URL);
+                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    body: formData
+                });
+                
+                log('contactLog', '✅ Contact form submitted successfully (no-cors mode)');
+                log('contactLog', 'Check Google Sheet for new row: https://docs.google.com/spreadsheets/d/1rXtU7FvxnkW7WUyvfhbru7mE8G0fCyGwBdYE3rI9NE0');
+            } catch (error) {
+                log('contactLog', '❌ Error: ' + error.message);
+            }
+        }
+
+        async function testTeachingApplication() {
+            log('teachingLog', 'Testing Teaching Application...');
+            
+            const formData = new FormData();
+            formData.append('fullName', 'Jane Teacher ' + Math.floor(Math.random() * 1000));
+            formData.append('email', 'teacher' + Math.floor(Math.random() * 1000) + '@example.com');
+            formData.append('phone', '91234' + Math.floor(Math.random() * 10000));
+            formData.append('position', 'Mathematics Teacher');
+            formData.append('qualification', 'M.Sc Mathematics, B.Ed');
+            formData.append('experience', '3-5 years');
+            formData.append('subjects', 'Mathematics, Physics');
+            formData.append('currentSalary', '25000');
+            formData.append('expectedSalary', '30000');
+            formData.append('availableFrom', '2024-02-01');
+            formData.append('coverLetter', 'I am passionate about teaching mathematics and would love to join your school. This is a test application.');
+            formData.append('references', 'Dr. ABC - Principal - abc@school.com - 9876543210');
+            formData.append('type', 'teaching_application');
+
+            log('teachingLog', 'Teaching application data prepared:');
+            log('teachingLog', '- Full Name: ' + formData.get('fullName'));
+            log('teachingLog', '- Email: ' + formData.get('email'));
+            log('teachingLog', '- Phone: ' + formData.get('phone'));
+            log('teachingLog', '- Position: ' + formData.get('position'));
+            log('teachingLog', '- Type: ' + formData.get('type'));
+
+            try {
+                log('teachingLog', 'Submitting to: ' + GOOGLE_SCRIPT_URL);
+                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    body: formData
+                });
+                
+                log('teachingLog', '✅ Teaching application submitted successfully (no-cors mode)');
+                log('teachingLog', 'Check Google Sheet for new row: https://docs.google.com/spreadsheets/d/1rXtU7FvxnkW7WUyvfhbru7mE8G0fCyGwBdYE3rI9NE0');
+            } catch (error) {
+                log('teachingLog', '❌ Error: ' + error.message);
+            }
+        }
+
+        // Auto-test both forms when page loads
+        window.onload = function() {
+            log('contactLog', 'Form testing page loaded. Click buttons to test forms.');
+            log('teachingLog', 'Form testing page loaded. Click buttons to test forms.');
+        };
+    </script>
+</body>
+</html>
