@@ -32,7 +32,7 @@ const ContactForm = () => {
       formDataToSend.append('email', formData.email);
       formDataToSend.append('phone', formData.phonenumber);
       formDataToSend.append('message', formData.message);
-      formDataToSend.append('type', 'Contact Form');
+      formDataToSend.append('type', 'contact_form');
 
       console.log('Submitting to:', GOOGLE_SCRIPT_URL);
       console.log('Form data:', {
