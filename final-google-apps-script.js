@@ -75,6 +75,10 @@ Please review the application in the Google Sheet.
       }
       
     } else {
+      // Get or create Contact Forms sheet
+      sheet = getOrCreateSheet(spreadsheet, 'Contact Forms');
+      ensureContactHeaders(sheet);
+
       // Handle contact form (default)
       var name = e.parameter.name || '';
       var email = e.parameter.email || '';
@@ -89,8 +93,7 @@ Please review the application in the Google Sheet.
         name,
         email,
         phone,
-        message,
-        '', '', '', '', '', '', '', '' // Empty cells for teaching app columns
+        message
       ]);
       
       // Send email notification for contact form
