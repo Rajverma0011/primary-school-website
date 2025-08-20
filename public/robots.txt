@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://rkpublicschoolbasti.netlify.app/sitemap.xml
+
+# Specific directories
+Allow: /images/
+Allow: /assets/
+
+# Disallow admin or private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.pdf$
+
+# Crawl delay (optional - be respectful to small servers)
+Crawl-delay: 1
+
+# Additional sitemaps (if you add more later)
+# Sitemap: https://rkpublicschoolbasti.netlify.app/news-sitemap.xml
