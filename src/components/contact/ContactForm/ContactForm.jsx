@@ -1,36 +1,63 @@
 import React, { useState } from 'react';
 import './ContactForm.css';
-import axios from 'axios';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: '',
-    phonenumber:'',
-    
+    phonenumber: '',
+    message: ''
   });
 
   const [status, setStatus] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // Your Google Apps Script Web App URL
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyai9isLfpkKvfU38tAimep8HfhMsGncA0_eBJcQx_p9133VBbhbfd9G2oGgpQLbAdlQg/exec';
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
+    setStatus('');
 
     try {
-      await axios.post('http://localhost:8000/api/contact/', formData); // ✅ Make sure this matches your Django URL
-      setStatus('Thank you for your message! We will get back to you soon.');
-      setFormData({ name: '', email: '', message: '' ,phonenumber:'' }); // Reset form data
+      // Create simple form data for Google Apps Script
+      const formDataToSend = new FormData();
+      formDataToSend.append('name', formData.name);
+      formDataToSend.append('email', formData.email);
+      formDataToSend.append('phone', formData.phonenumber);
+      formDataToSend.append('message', formData.message);
+      formDataToSend.append('type', 'contact_form');
+
+      console.log('Submitting to:', GOOGLE_SCRIPT_URL);
+      console.log('Form data:', {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phonenumber,
+        message: formData.message
+      });
+
+      // Submit to Google Apps Script
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formDataToSend
+      });
+
+      // Success message
+      setStatus('✅ Thank you for contacting R.K. Public School! We have received your inquiry and will get back to you soon.');
+      setFormData({ name: '', email: '', phonenumber: '', message: '' });
+
     } catch (error) {
-      console.error('Error submitting contact form:', error);
-      setStatus('Something went wrong. Please try again.');
+      console.error('Error submitting form:', error);
+      setStatus('❌ There was an error submitting your message. Please try again or call us at 8400006780.');
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -40,50 +67,52 @@ const ContactForm = () => {
       {status && <p className="status-message">{status}</p>}
       <form onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="name">Full Name</label>
+          <label>Full Name</label>
           <input
             type="text"
-            id="name"
             name="name"
             value={formData.name}
             onChange={handleChange}
             required
           />
         </div>
+
         <div className="form-group">
-          <label htmlFor="email">Email Address</label>
+          <label>Email Address</label>
           <input
             type="email"
-            id="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
             required
           />
         </div>
-        <div className ="form-group">
-          <label htmlFor="phonenumber">Phonenumber</label>
+
+        <div className="form-group">
+          <label>Phone Number</label>
           <input
             type="tel"
-            id="phonenumber"
             name="phonenumber"
             value={formData.phonenumber}
             onChange={handleChange}
             required
           />
         </div>
+
         <div className="form-group">
-          <label htmlFor="message">Your Message</label>
+          <label>Your Message</label>
           <textarea
-            id="message"
             name="message"
             rows="5"
             value={formData.message}
             onChange={handleChange}
             required
-          ></textarea>
+          />
         </div>
-        <button type="submit" className="submit-button">Send Message</button>
+
+        <button type="submit" disabled={isSubmitting}>
+          {isSubmitting ? 'Sending...' : 'Send Message'}
+        </button>
       </form>
     </div>
   );

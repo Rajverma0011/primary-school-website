@@ -1,19 +1,148 @@
 .curriculum-container {
-  background-color: #f8f9fa;
-  border-radius: 8px;
-  padding: 2rem;
-  margin: 2rem auto;
-  max-width: 900px;
+  padding: 4rem 2rem;
+  background: var(--bg-primary);
+}
+
+.curriculum-header {
   text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem;
 }
 
-.curriculum-container h3 {
-  font-size: 1.75rem;
-  color: #007bff;
-  margin-top: 0;
+.curriculum-header h2 {
+  color: var(--primary-color);
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
 }
 
-.curriculum-container p {
-  font-size: 1.1rem;
+.curriculum-header p {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
   line-height: 1.7;
+}
+
+.curriculum-features {
+  margin-bottom: 4rem;
+}
+
+.curriculum-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.curriculum-card {
+  background: white;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow-light);
+  text-align: center;
+  transition: transform 0.3s ease;
+  border-top: 4px solid var(--primary-color);
+}
+
+.curriculum-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-medium);
+}
+
+.curriculum-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.curriculum-card h3 {
+  color: var(--primary-color);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.curriculum-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.curriculum-card li {
+  color: var(--text-secondary);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  font-weight: 500;
+}
+
+.curriculum-card li:last-child {
+  border-bottom: none;
+}
+
+.academic-info {
+  background: var(--bg-secondary);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.info-item {
+  text-align: center;
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow-light);
+}
+
+.info-item h4 {
+  color: var(--primary-color);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.info-item p {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .curriculum-container {
+    padding: 3rem 1rem;
+  }
+
+  .curriculum-header h2 {
+    font-size: 1.875rem;
+  }
+
+  .curriculum-header p {
+    font-size: 1.125rem;
+  }
+
+  .curriculum-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .curriculum-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .academic-info {
+    padding: 2rem 1.5rem;
+  }
+
+  .info-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+  }
 }
