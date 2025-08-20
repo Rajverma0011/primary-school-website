@@ -1,4 +1,5 @@
 import React from 'react';
+import SEOHead from '../components/SEOHead.jsx';
 import MissionStatement from '../components/about/MissionStatement/MissionStatement.jsx';
 import './About.css';
 
