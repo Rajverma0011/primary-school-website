@@ -82,11 +82,6 @@ Please review the application in the Google Sheet.
       var message = e.parameter.message || '';
       var timestamp = e.parameter.timestamp || new Date().toString();
 
-      // Add headers if this is the first row
-      if (sheet.getLastRow() === 0) {
-        sheet.appendRow(['Timestamp', 'Type', 'Name', 'Email', 'Phone', 'Message']);
-      }
-
       // Add the contact form data
       sheet.appendRow([
         new Date(),
@@ -94,7 +89,8 @@ Please review the application in the Google Sheet.
         name,
         email,
         phone,
-        message
+        message,
+        '', '', '', '', '', '', '', '' // Empty cells for teaching app columns
       ]);
       
       // Send email notification for contact form
