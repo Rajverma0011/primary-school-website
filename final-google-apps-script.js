@@ -3,10 +3,13 @@ function doPost(e) {
     var SHEET_ID = '1rXtU7FvxnkW7WUyvfhbru7mE8G0fCyGwBdYE3rI9NE0';
     var spreadsheet = SpreadsheetApp.openById(SHEET_ID);
     var sheet = spreadsheet.getActiveSheet();
-    
+
+    // Ensure proper headers are set up
+    ensureHeaders(sheet);
+
     // Check if this is a teaching application or contact form
     var formType = e.parameter.type || 'contact_form';
-    
+
     if (formType === 'teaching_application') {
       // Handle teaching application
       var fullName = e.parameter.fullName || '';
@@ -22,26 +25,6 @@ function doPost(e) {
       var coverLetter = e.parameter.coverLetter || '';
       var references = e.parameter.references || '';
       var timestamp = e.parameter.timestamp || new Date().toString();
-      
-      // Add headers if this is the first row
-      if (sheet.getLastRow() === 0) {
-        sheet.appendRow([
-          'Timestamp',
-          'Type',
-          'Full Name',
-          'Email',
-          'Phone',
-          'Position',
-          'Qualification',
-          'Experience',
-          'Subjects',
-          'Current Salary',
-          'Expected Salary',
-          'Available From',
-          'Cover Letter',
-          'References'
-        ]);
-      }
       
       // Add the teaching application data
       sheet.appendRow([
